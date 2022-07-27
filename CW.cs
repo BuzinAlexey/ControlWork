@@ -21,8 +21,7 @@ ChangeArr(array);
 //Функция ввода массива с клавиатуры
 void EnterArray(string[] arr)
 {
-    Random rnd = new Random();
-    for (int i = 0; i < arr.Length; i++)
+       for (int i = 0; i < arr.Length; i++)
     {
         Console.Write($"Введите 'элемент массива {i+1}:\t ");
         arr[i] =Console.ReadLine();
