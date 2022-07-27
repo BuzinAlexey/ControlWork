@@ -12,8 +12,11 @@ return;
 string[] array = new string[n];
 //Ввод элементов массива с клавиатуры 
 EnterArray(array);
+Console.WriteLine("Созданный массив: ");
 //вывод массива
 PrintArr(array);
+Console.WriteLine("Массив после выборки: ");
+ChangeArr(array);
 
 //Функция ввода массива с клавиатуры
 void EnterArray(string[] arr)
@@ -21,7 +24,7 @@ void EnterArray(string[] arr)
     Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"Введите 'элемент массива {i}:\t ");
+        Console.Write($"Введите 'элемент массива {i+1}:\t ");
         arr[i] =Console.ReadLine();
     }
 }
@@ -33,7 +36,15 @@ void PrintArr(string[] arr)
     }
     Console.WriteLine();
 }
-
+void ChangeArr(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length<=3)
+        Console.Write($"{arr[i]}" + "|");
+    }
+    Console.WriteLine();
+}
 
 
 
